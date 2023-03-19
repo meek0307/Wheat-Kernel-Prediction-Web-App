@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import dill
 from sklearn.metrics import r2_score
-from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import GridSearchCV,RandomizedSearchCV
 
 from src.exception import CustomException
 
@@ -29,7 +29,7 @@ def evaluate_models(X_train, y_train,X_test,y_test,models,param):
             model = list(models.values())[i]
             para=param[list(models.keys())[i]]
 
-            gs = GridSearchCV(model,para,cv=3)
+            gs = RandomizedSearchCV(model,para,cv=5,verbose=2,n_jobs=-1)
             gs.fit(X_train,y_train)
 
             model.set_params(**gs.best_params_)
