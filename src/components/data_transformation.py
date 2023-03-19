@@ -16,7 +16,7 @@ from src.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
-    preprocessor_obj_file_path=os.path.join('artifacts',"proprocessor.pkl")
+    preprocessor_obj_file_path=os.path.join('artifacts',"preprocessor.pkl")
 
 class DataTransformation:
     def __init__(self):
@@ -29,7 +29,7 @@ class DataTransformation:
         '''
         try:
             
-            numerical_columns = ["Area","Perimeter", "Compactness", "Length of kernel", "Width of kernel","Asymmetry coefficient","Length of kernel groove"]
+            numerical_columns = ["Area","Perimeter", "Compactness", "Length_of_kernel", "Width_of_kernel","Asymmetry_coefficient","Length_of_kernel_groove"]
             
             num_pipeline= Pipeline(
                 steps=[
@@ -68,7 +68,7 @@ class DataTransformation:
             preprocessing_obj=self.get_data_transformer_object()
 
             target_column_name="Class (1, 2, 3)"
-            numerical_columns = ["Area","Perimeter", "Compactness", "Length of kernel", "Width of kernel","Asymmetry coefficient","Length of kernel groove" ]
+            numerical_columns = ["Area","Perimeter", "Compactness", "Length_of_kernel", "Width_of_kernel","Asymmetry_coefficient","Length_of_kernel_groove" ]
 
             input_feature_train_df=train_df.drop(columns=[target_column_name],axis=1)
             target_feature_train_df=train_df[target_column_name]

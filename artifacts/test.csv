@@ -1,4 +1,4 @@
-Area,Perimeter,Compactness,Length of kernel,Width of kernel,Asymmetry coefficient,Length of kernel groove,"Class (1, 2, 3)",Unnamed: 8,Unnamed: 9
+Area,Perimeter,Compactness,Length_of_kernel,Width_of_kernel,Asymmetry_coefficient,Length_of_kernel_groove,"Class (1, 2, 3)",Unnamed: 8,Unnamed: 9
 13.16,13.82,0.8662,5.454,2.975,0.8551,5.056,1,,
 11.27,12.97,0.8419,5.088,2.763,4.309,5.0,3,,
 19.51,16.71,0.878,6.366,3.801,2.962,6.185,2,,
