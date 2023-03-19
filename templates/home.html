@@ -1,0 +1,56 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Wheat Kernel Prediction Web App</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend> Prediction Model</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Area</label>
+            <input type="number" id="input the area value" name="input the area value" min="0.0" max="20.0" value="15.0">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Perimeter</label>
+            <input type="number" id="input the Perimeter value" name="input the Perimeter value" min="0" max="20"   value="14">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Compactness</label>
+            <input type="number" id="input the Compactness value" name="input the Compactness value" min="0" max="1"   value=".87">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Length_of_kernel</label>
+            <input type="number" id="input the Length_of_kernel value" name="input the Length_of_kernel value" min="0" max="10"   value="5.76">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Width_of_kernel</label>
+            <input type="number" id="input the Width_of_kernel value" name="input the Width_of_kernel value" min="0" max="4.0"   value="3.31">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Asymmetry_coefficient</label>
+            <input type="number" id="input the Asymmetry_coefficient value" name="input the Asymmetry_coefficient value" min="0" max="10"   value="2.22">
+        </div>
+        <div class="mb-3">
+            <label class="form-label"> Length_of_kernel_groove</label>
+            <input type="number" id="input the Length_of_kernel_groove value" name="input the Length_of_kernel_groove value" min="0" max="10"   value="5.22">
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict the class of the wheat kernel " required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>
+
+
+
+
+
+
+
+
+  
+   
