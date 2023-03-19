@@ -24,10 +24,11 @@ class DataTransformation:
 
     def get_data_transformer_object(self):
         '''
-        This function si responsible for data trnasformation
+        This function is responsible for data trnasformation
         
         '''
         try:
+            
             numerical_columns = ["Area","Perimeter", "Compactness", "Length of kernel", "Width of kernel","Asymmetry coefficient","Length of kernel groove"]
             
             num_pipeline= Pipeline(
