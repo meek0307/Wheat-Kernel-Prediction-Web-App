@@ -27,8 +27,8 @@ def predict_datapoint():
             Compactness=request.form.get('Compactness'),
             Length_of_kernel=request.form.get('Length_of_kernel'),
             Width_of_kernel=request.form.get('Width_of_kernel'),
-            Asymmetry_coefficient=float(request.form.get('Asymmetry_coefficient')),
-            Length_of_kernel_groove=float(request.form.get('Length_of_kernel_groove'))
+            Asymmetry_coefficient=(request.form.get('Asymmetry_coefficient')),
+            Length_of_kernel_groove=(request.form.get('Length_of_kernel_groove'))
 
         )
         pred_df=data.get_data_as_data_frame()

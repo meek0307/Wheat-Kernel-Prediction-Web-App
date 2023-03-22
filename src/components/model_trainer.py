@@ -42,17 +42,17 @@ class ModelTrainer:
                 test_array[:,-1]
             )
             models = {
-                "LogisticRegression":LogisticRegression(),
-                "GradientBoosting":GradientBoostingClassifier(),
-                "SVM":SVC(),
-                "Bagging": BaggingClassifier(),
+                "LogisticRegression":LogisticRegression(solver='liblinear', penalty='l1', max_iter=100),
+                "GradientBoosting":GradientBoostingClassifier(n_estimators=100,random_state=5,learning_rate=0.1),
+                "SVM":SVC(kernel='rbf', C=2, gamma=1.0),
+                "Bagging": BaggingClassifier(n_estimators=100,random_state=5),
                 "GaussianNB":GaussianNB(),
-                "RandomForest": RandomForestClassifier(),
-                "KNN": KNeighborsClassifier(),
-                "AdaBoost":AdaBoostClassifier(),
-                "LightGBM":LGBMClassifier(), 
-                "CatBoost": CatBoostClassifier(),
-                "ExtraTrees":ExtraTreesClassifier()
+                "RandomForest": RandomForestClassifier(n_estimators=100, random_state=5,max_depth=5,criterion = 'entropy'),
+                "KNN": KNeighborsClassifier(n_neighbors=10),
+                "AdaBoost":AdaBoostClassifier(n_estimators=100,random_state=5,),
+                "LightGBM":LGBMClassifier(n_estimators=100,random_state=5), 
+                "CatBoost": CatBoostClassifier(n_estimators=100,random_state=5),
+                "ExtraTrees":ExtraTreesClassifier(n_estimators=100,random_state=5)
          
             }
             params = {

@@ -46,7 +46,7 @@ class CustomData:
 
         self.Asymmetry_coefficient = Asymmetry_coefficient
 
-        self. Length_of_kernel_groove =  Length_of_kernel_groove
+        self.Length_of_kernel_groove = Length_of_kernel_groove
 
     def get_data_as_data_frame(self):
         try:
@@ -57,7 +57,7 @@ class CustomData:
                 "Length_of_kernel": [self.Length_of_kernel],
                 "Width_of_kernel": [self.Width_of_kernel],
                 "Asymmetry_coefficient": [self.Asymmetry_coefficient],
-                " Length_of_kernel_groove": [self. Length_of_kernel_groove],
+                "Length_of_kernel_groove": [self.Length_of_kernel_groove],
             }
 
             return pd.DataFrame(custom_data_input_dict)
