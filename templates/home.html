@@ -1,48 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href={{url_for('static', filename='styles.css')}}>
+        <title>Wheat Kernel Prediction</title>
+    </head>
 <body>
     <div class="login">
-       <h1>Wheat Kernel Prediction Web App</h1>
+       <h3>Wheat Kernel Prediction Web App</h3>
    
        <form action="{{ url_for('predict_datapoint')}}" method="post">
         <h1>
-            <legend> Prediction Model</legend>
+            <legend>Enter Values in the below Columns </legend>
         </h1>
         <div class="mb-3">
             <label class="form-label">Area</label>
-            <input class="form-control" type=" range" name="Area" min="0.0" max="20.0" step="0.001" />
+            <input class="form-control" type=" text" name="Area" min="0.0" max="20.0" step="0.001" />
         </div>
         <div class="mb-3">
             <label class="form-label">Perimeter</label>
-            <input class="form-control" type="range"  name="Perimeter" min="0" max="20"   step="0.001" />
+            <input class="form-control" type="text"  name="Perimeter" min="0" max="20"   step="0.001" />
         </div>
         <div class="mb-3">
             <label class="form-label">Compactness</label>
-            <input class="form-control" type="range"  name="Compactness" min="0" max="1" step="0.001"  />
+            <input class="form-control" type="text"  name="Compactness" min="0" max="1" step="0.001"  />
         </div>
         <div class="mb-3">
             <label class="form-label">Length_of_kernel</label>
-            <input class="form-control" type="range"  name="Length_of_kernel" min="0" max="10" step="0.001" />
+            <input class="form-control" type="text"  name="Length_of_kernel" min="0" max="10" step="0.001" />
         </div>
         <div class="mb-3">
             <label class="form-label">Width_of_kernel</label>
-            <input class="form-control" type="range"  name="Width_of_kernel" min="0" max="4.0" step="0.001"  />
+            <input class="form-control" type="text"  name="Width_of_kernel" min="0" max="4.0" step="0.001"  />
         </div>
         <div class="mb-3">
             <label class="form-label">Asymmetry_coefficient</label>
-            <input class="form-control" type="range"  name="Asymmetry_coefficient" min="0" max="10" step="0.001"  />
+            <input class="form-control" type="text"  name="Asymmetry_coefficient" min="0" max="10" step="0.001"  />
         </div>
         <div class="mb-3">
             <label class="form-label">Length_of_kernel_groove</label>
-            <input class="form-control" type="range"  name="Length_of_kernel_groove" min="0" max="10" step="0.001"  />
+            <input class="form-control" type="text"  name="Length_of_kernel_groove" min="0" max="10" step="0.001"  />
         </div>
         <div class="mb-3">
             <input class="btn btn-primary" type="submit" value="Predict" required  />
         </div>
     </form>
-    <h2>
-       The predicted class is {{results}}
-    </h2>
+    
    <body>
 </html>
 

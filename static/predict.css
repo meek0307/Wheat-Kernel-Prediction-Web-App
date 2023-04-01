@@ -1,0 +1,62 @@
+/* Responsive styles for the Kama Wheat page */
+@media screen and (max-width: 768px) {
+  /* Set the font size for small screens */
+  h1, h2, p {
+    font-size: 1.2em;
+  }
+}
+
+/* Styles for the Kama Wheat page */
+body {
+  background-image: url("wheat.jpg");
+  font-family: Arial, sans-serif;
+  background-color: #ddaaaa;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Styles for the Kama Wheat image */
+img.wheat {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Media queries for the Kama Wheat image */
+@media only screen and (max-width: 768px) {
+  img.wheat {
+    max-width: 300px;
+  }
+}

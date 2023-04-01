@@ -36,7 +36,14 @@ def predict_datapoint():
 
         predict_pipeline=PredictPipeline()
         results=predict_pipeline.predict(pred_df)
-        return render_template('home.html',results=results[0])
+        output = results
+        if output == 1:
+            return render_template("Kama.html")
+        elif output == 2:
+            return render_template("Rosa.html")
+        else:
+            return render_template("Canadian.html") 
+    return render_template('home.html',results=results[0])
     
 
 if __name__=="__main__":
