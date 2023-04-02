@@ -12,12 +12,10 @@
     </head>
 <body>
     <div class="login">
-       <h3>Wheat Kernel Prediction Web App</h3>
+       <h3>Wheat Kernel Predictor</h3>
    
        <form action="{{ url_for('predict_datapoint')}}" method="post">
-        <h1>
-            <legend>Enter Values in the below Columns </legend>
-        </h1>
+        
         <div class="mb-3">
             <label class="form-label">Area</label>
             <input class="form-control" type=" text" name="Area" min="0.0" max="20.0" step="0.001" />
