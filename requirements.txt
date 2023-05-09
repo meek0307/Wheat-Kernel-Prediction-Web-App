@@ -9,4 +9,23 @@ lightgbm
 dill
 Flask
 gunicorn
+# Set the PYTHONPATH environment variable to include the src directory
+export PYTHONPATH := $(shell pwd)/src
+
+# Define the default target
+all: run
+
+# Install the requirements
+install:
+    pip install -r requirements.txt
+
+# Run the prediction pipeline
+run: copy-model
+    python src/pipeline/predict_pipeline.py
+
+# Clean up the data directory
+clean:
+    rm -rf data/*
+
+.PHONY: all install copy-model run clean
 
