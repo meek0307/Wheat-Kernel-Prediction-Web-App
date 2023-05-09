@@ -8,5 +8,7 @@ xgboost
 lightgbm
 dill
 Flask
+sklearn.preprocessing
+src.pipeline.predict_pipeline
 gunicorn
 
